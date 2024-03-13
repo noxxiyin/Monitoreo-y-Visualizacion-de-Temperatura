@@ -29,7 +29,8 @@ Instalación y Configuración
 2. Asegúrese de tener una conexión WiFi disponible y anote las credenciales de acceso.
 3. Modifique el archivo 'main.py' para incluir su SSID y contraseña de WiFi en las variables correspondientes.
 4. Cargue 'main.py' en su placa microcontroladora.
-5. Ejecute los scripts de MATLAB en un entorno que tenga MATLAB instalado.
+5. Modifique los valores "readChannelID", "myFieldID" y "readAPIKey" a los valores de su canal, campo y llave de API (en caso de ser necesaria) de ThingSpeak.
+6. Ejecute los scripts de MATLAB en un entorno que tenga MATLAB instalado, los scripts están configurados para hacer la graficación de 5 días, modifique la constante "oneDay" para los últimos días de grabación de datos ("oneDay" debe contener día 5, para que el programa grafique días 5, 4, 3, 2 y 1).
 
 Uso
 ---
@@ -37,7 +38,3 @@ Una vez configurado el sistema:
 1. El script 'main.py' leerá periódicamente los datos de temperatura y humedad del sensor DHT11.
 2. Los datos leídos se enviarán a 'api.thingspeak.com' (o a un servidor de su elección).
 3. Utilice los scripts de MATLAB para procesar los datos recibidos según sea necesario.
-
-Contribución
-------------
-Las contribuciones al proyecto son bienvenidas. Por favor, envíe sus pull requests al repositorio principal o contacte a los administradores del proyecto para más detalles.
